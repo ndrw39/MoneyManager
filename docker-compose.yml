@@ -4,10 +4,10 @@ services:
   web:
     container_name: python3.9
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: docker
+      dockerfile: docker/Dockerfile
     volumes:
-      - ./../:/code/app:z
+      - ./app:/code/app:z
     ports:
       - "80:80"
     tty: true
